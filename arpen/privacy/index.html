@@ -4,201 +4,473 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Política de privacidad de Arpen para Android.">
-  <title>Política de privacidad — Arpen</title>
+  <title>Política de privacidad — Arpen | Aurevia</title>
   <style>
     :root {
-      color-scheme: dark;
-      --bg: #111416;
-      --surface: #1b2024;
-      --text: #edf1f2;
-      --muted: #b3bec3;
-      --accent: #a8ea34;
-      --border: #314047;
+      --paper: #f7f7f5;
+      --paper-deep: #eeeeeb;
+      --ink: #000000;
+      --graphite: #1c1c1c;
+      --steel: #303031;
+      --muted: #5d5d60;
+      --silver: #a2a2a2;
+      --line: #d5d5d2;
+      --white: #ffffff;
+      --max: 1120px;
     }
+
     * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
-      background: linear-gradient(145deg, #111416, #18201c);
-      color: var(--text);
-      font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--graphite);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.72;
     }
-    main { max-width: 860px; margin: 0 auto; padding: 56px 24px 80px; }
-    article {
-      background: rgba(27, 32, 36, .92);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: clamp(24px, 5vw, 52px);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, .28);
+
+    a {
+      color: var(--ink);
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
     }
-    h1, h2 { line-height: 1.2; }
-    h1 { font-size: clamp(2rem, 6vw, 3.3rem); margin: 0 0 8px; }
-    h2 { margin-top: 42px; color: var(--accent); font-size: 1.3rem; }
-    p, li { color: var(--muted); }
-    strong { color: var(--text); }
-    a { color: var(--accent); }
-    .meta {
-      color: var(--accent);
-      font-weight: 700;
-      margin: 0 0 30px;
+
+    a:hover { color: var(--muted); }
+
+    .page {
+      width: min(calc(100% - 40px), var(--max));
+      margin: 0 auto;
     }
-    .notice {
-      border-left: 4px solid var(--accent);
-      padding: 14px 18px;
-      background: rgba(168, 234, 52, .08);
-      border-radius: 0 12px 12px 0;
+
+    .masthead {
+      min-height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      border-bottom: 1px solid var(--ink);
     }
-    footer {
-      margin-top: 42px;
-      padding-top: 22px;
-      border-top: 1px solid var(--border);
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      display: block;
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
+    .brand-copy { line-height: 1.15; }
+
+    .brand-name {
+      margin: 0;
+      color: var(--ink);
+      font-size: 0.95rem;
+      font-weight: 750;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .brand-section {
+      margin: 5px 0 0;
       color: var(--muted);
-      font-size: .92rem;
+      font-size: 0.7rem;
+      font-weight: 650;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .document-label {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-align: right;
+    }
+
+    .intro {
+      padding: clamp(52px, 8vw, 104px) 0 clamp(42px, 6vw, 76px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 0.74rem;
+      font-weight: 750;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 820px;
+      margin: 0;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.55rem, 7vw, 5.6rem);
+      font-weight: 500;
+      letter-spacing: -0.055em;
+      line-height: 0.96;
+    }
+
+    .lead {
+      max-width: 700px;
+      margin: 30px 0 0;
+      color: var(--steel);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      line-height: 1.62;
+    }
+
+    .revision {
+      display: inline-flex;
+      margin-top: 26px;
+      padding-top: 12px;
+      border-top: 2px solid var(--ink);
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 650;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: clamp(42px, 8vw, 122px);
+      padding: 52px 0 82px;
+    }
+
+    .index {
+      position: sticky;
+      top: 26px;
+      align-self: start;
+    }
+
+    .index-title {
+      margin: 0 0 14px;
+      color: var(--ink);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .index ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid var(--line);
+    }
+
+    .index li { border-bottom: 1px solid var(--line); }
+
+    .index a {
+      display: block;
+      padding: 10px 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-decoration: none;
+    }
+
+    .index a:hover { color: var(--ink); }
+
+    .content { max-width: 720px; }
+
+    section {
+      scroll-margin-top: 28px;
+      padding: 0 0 38px;
+      margin: 0 0 40px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.55rem, 3vw, 2.15rem);
+      font-weight: 500;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+    }
+
+    p { margin: 0 0 17px; }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      margin: 19px 0;
+      padding-left: 20px;
+    }
+
+    li { margin: 8px 0; }
+
+    strong { color: var(--ink); }
+
+    .statement {
+      margin: 0 0 38px;
+      padding: 22px 24px;
+      border-left: 3px solid var(--ink);
+      background: var(--paper-deep);
+      color: var(--steel);
+    }
+
+    .statement strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 27px 0 36px;
+      border-top: 1px solid var(--ink);
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    @media (max-width: 720px) {
+      .page { width: min(calc(100% - 32px), var(--max)); }
+
+      .masthead {
+        min-height: 82px;
+        align-items: center;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+      }
+
+      .document-label { display: none; }
+
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding-top: 38px;
+      }
+
+      .index {
+        position: static;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--ink);
+      }
+
+      .index ol {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 20px;
+      }
+
+      footer {
+        display: block;
+        line-height: 1.6;
+      }
+
+      footer p + p { margin-top: 8px; }
+    }
+
+    @media (max-width: 430px) {
+      .index ol { grid-template-columns: 1fr; }
+      h1 { font-size: 2.55rem; }
     }
   </style>
 </head>
 <body>
-  <main>
-    <article>
-      <h1>Política de privacidad de Arpen</h1>
-      <p class="meta">Última actualización: 26 de noviembre de 2026</p>
+  <header class="page masthead">
+    <div class="brand">
+      <img class="brand-mark" src="./Aurevia-Profile.svg" alt="Aurevia">
+      <div class="brand-copy">
+        <p class="brand-name">Aurevia</p>
+        <p class="brand-section">Documentos legales</p>
+      </div>
+    </div>
+    <p class="document-label">Arpen · Android</p>
+  </header>
 
-      <p>
-        Esta Política de privacidad explica cómo <strong>Aurevia</strong> trata los datos
-        al usar <strong>Arpen</strong>, aplicación para Android con identificador de paquete
+  <main class="page">
+    <section class="intro" aria-labelledby="document-title">
+      <p class="eyebrow">Privacidad y tratamiento de datos</p>
+      <h1 id="document-title">Política de privacidad<br>de Arpen.</h1>
+      <p class="lead">
+        Esta política explica cómo Aurevia trata los datos al utilizar Arpen,
+        aplicación para Android con identificador
         <strong>com.aurevia.arpen</strong>.
       </p>
+      <p class="revision">Última actualización: 26 de noviembre de 2026</p>
+    </section>
 
-      <p class="notice">
-        Arpen está diseñado para funcionar principalmente de forma local. No vende datos
-        personales, no incluye publicidad ni usa datos para crear perfiles publicitarios.
-      </p>
+    <div class="layout">
+      <nav class="index" aria-label="Índice de la política">
+        <p class="index-title">Contenido</p>
+        <ol>
+          <li><a href="#datos">Datos tratados</a></li>
+          <li><a href="#biblioteca">Biblioteca local</a></li>
+          <li><a href="#drive">Google Drive</a></li>
+          <li><a href="#link">Arpen Link</a></li>
+          <li><a href="#lyrics">Letras</a></li>
+          <li><a href="#microfono">Micrófono</a></li>
+          <li><a href="#seguridad">Seguridad</a></li>
+          <li><a href="#eliminacion">Eliminación</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ol>
+      </nav>
 
-      <h2>1. Datos que Arpen trata</h2>
+      <article class="content">
+        <aside class="statement">
+          <strong>Principio de Arpen</strong>
+          Arpen funciona principalmente de forma local. No vende datos personales,
+          no incluye publicidad y no crea perfiles publicitarios.
+        </aside>
 
-      <p>Según las funciones que elijas utilizar, Arpen puede tratar:</p>
+        <section id="datos">
+          <h2>1. Datos que Arpen trata</h2>
+          <p>Según las funciones que elijas utilizar, Arpen puede tratar:</p>
+          <ul>
+            <li>Metadatos de música y video, como título, artista, álbum, duración y tipo de archivo.</li>
+            <li>Playlists, orden de reproducción, favoritos, ajustes, perfiles de audio, mapas del modo ritmo, progreso, Arps, logros y configuraciones visuales.</li>
+            <li>Letras importadas, creadas o sincronizadas por el usuario.</li>
+            <li>Fondos, imágenes, portadas personalizadas, archivos de música y videos únicamente cuando el usuario decide incluirlos en un respaldo o transferencia.</li>
+            <li>Nombre, correo electrónico, identificador de Google y foto de perfil disponible mediante Google cuando el usuario inicia sesión voluntariamente para usar Google Drive.</li>
+            <li>Un identificador técnico y nombre del dispositivo durante una conexión directa mediante Arpen Link.</li>
+          </ul>
+        </section>
 
-      <ul>
-        <li>Metadatos de música y video presentes en tu dispositivo, como título, artista, álbum, duración y tipo de archivo.</li>
-        <li>Playlists, orden de reproducción, favoritos, ajustes, perfiles de audio, mapas del modo ritmo, progreso, Arps, logros y configuraciones visuales.</li>
-        <li>Letras importadas, creadas o sincronizadas por el usuario.</li>
-        <li>Fondos, imágenes, portadas personalizadas, archivos de música y videos únicamente cuando el usuario decide incluirlos en una transferencia o respaldo.</li>
-        <li>Nombre, correo electrónico, identificador de Google y foto de perfil disponible mediante Google cuando el usuario inicia sesión voluntariamente para usar Google Drive.</li>
-        <li>Un identificador técnico del dispositivo y nombre del dispositivo durante una conexión directa mediante Arpen Link.</li>
-      </ul>
+        <section id="biblioteca">
+          <h2>2. Biblioteca local</h2>
+          <p>
+            Arpen solicita permisos para leer archivos multimedia únicamente para mostrar
+            y reproducir la biblioteca local autorizada por el usuario. Los archivos
+            permanecen en el dispositivo, salvo que el usuario elija expresamente
+            incluirlos en un respaldo o transferencia.
+          </p>
+        </section>
 
-      <h2>2. Uso local de la biblioteca</h2>
+        <section id="drive">
+          <h2>3. Google Drive y respaldos opcionales</h2>
+          <p>
+            El inicio de sesión con Google es opcional. Si autorizas Google Drive,
+            Arpen puede crear, consultar, descargar o restaurar respaldos dentro de
+            tu propia cuenta de Google Drive.
+          </p>
+          <p>
+            Los respaldos solo incluyen los elementos seleccionados por el usuario:
+            datos de Arpen, playlists, letras, mapas, perfiles, fondos, imágenes,
+            archivos de música o videos. Aurevia no opera un servidor propio para
+            almacenar estos respaldos.
+          </p>
+          <p>
+            Puedes revocar el acceso desde tu cuenta de Google y eliminar los
+            respaldos directamente desde Google Drive.
+          </p>
+        </section>
 
-      <p>
-        Arpen solicita permisos para leer archivos multimedia únicamente para mostrar y
-        reproducir la biblioteca local que el usuario autorice. Estos archivos permanecen
-        en el dispositivo salvo que el usuario elija expresamente incluirlos en un respaldo
-        o transferencia.
-      </p>
+        <section id="link">
+          <h2>4. Arpen Link</h2>
+          <p>
+            Arpen Link permite transferir paquetes elegidos por el usuario entre
+            dispositivos conectados a una red local. Durante una conexión se
+            intercambian los datos técnicos necesarios para identificar los
+            dispositivos y el contenido seleccionado para transferir.
+          </p>
+          <p>
+            Esta función no utiliza servidores de Aurevia y requiere la intervención
+            explícita del usuario. Se recomienda utilizar redes locales confiables.
+          </p>
+        </section>
 
-      <h2>3. Google Drive y respaldos opcionales</h2>
+        <section id="lyrics">
+          <h2>5. Letras y servicios externos</h2>
+          <p>
+            Cuando utilizas las funciones relacionadas con letras, Arpen puede abrir
+            o consultar LRCLIB u otro servicio externo elegido por ti. Para realizar
+            una búsqueda, se pueden enviar datos como título, artista, álbum o
+            duración de una canción al servicio correspondiente.
+          </p>
+          <p>
+            El uso de servicios externos se rige también por sus propias políticas
+            de privacidad.
+          </p>
+        </section>
 
-      <p>
-        El inicio de sesión con Google es opcional. Si eliges autorizar Google Drive,
-        Arpen puede crear, consultar, descargar o restaurar respaldos dentro de tu propia
-        cuenta de Google Drive. Los respaldos pueden incluir únicamente los elementos que
-        selecciones: datos de Arpen, playlists, letras, mapas, perfiles, fondos, imágenes,
-        archivos de música o videos.
-      </p>
+        <section id="microfono">
+          <h2>6. Micrófono</h2>
+          <p>
+            El micrófono solo se utiliza si activas expresamente una función reactiva
+            o de calibración. Arpen no lo utiliza para publicidad, vigilancia ni para
+            enviar grabaciones a servidores de Aurevia.
+          </p>
+        </section>
 
-      <p>
-        Arpen usa el permiso de Google Drive limitado a los archivos creados o abiertos por
-        Arpen. Aurevia no opera un servidor propio para almacenar esos respaldos. Puedes
-        revocar el acceso desde tu cuenta de Google y eliminar los respaldos directamente
-        desde Google Drive.
-      </p>
+        <section id="seguridad">
+          <h2>7. Compartición y seguridad</h2>
+          <p>Arpen solo comparte datos en los siguientes casos elegidos por el usuario:</p>
+          <ul>
+            <li>Con Google Drive, al crear, consultar o restaurar un respaldo.</li>
+            <li>Con otro dispositivo, al iniciar una transferencia mediante Arpen Link.</li>
+            <li>Con un servicio externo de letras, al realizar una búsqueda o abrir dicho servicio.</li>
+          </ul>
+          <p>
+            Las comunicaciones con Google Drive y servicios web compatibles usan las
+            conexiones seguras proporcionadas por dichos servicios. Aurevia no vende
+            información personal ni incorpora redes publicitarias.
+          </p>
+        </section>
 
-      <h2>4. Arpen Link</h2>
+        <section id="eliminacion">
+          <h2>8. Conservación y eliminación</h2>
+          <ul>
+            <li>Los datos locales pueden eliminarse desde Arpen, al borrar los datos de la aplicación o al desinstalarla.</li>
+            <li>Los respaldos de Google Drive pueden eliminarse desde Google Drive.</li>
+            <li>Los paquetes de Arpen Link y respaldos locales permanecen bajo control del usuario en la ubicación elegida.</li>
+            <li>Aurevia no conserva una base de datos propia con la biblioteca, archivos multimedia o respaldos de los usuarios.</li>
+          </ul>
+        </section>
 
-      <p>
-        Arpen Link permite transferir paquetes que el usuario elige entre dispositivos
-        conectados a una red local. Durante una conexión se intercambian datos técnicos
-        necesarios para identificar los dispositivos y los archivos o datos seleccionados
-        para la transferencia. Esta función no usa servidores de Aurevia y requiere la
-        intervención explícita del usuario.
-      </p>
+        <section>
+          <h2>9. Público y actualizaciones</h2>
+          <p>
+            Arpen está orientada a usuarios de 13 años o más y no está diseñada
+            específicamente para menores de 13 años.
+          </p>
+          <p>
+            Esta política puede actualizarse cuando cambien las funciones de Arpen
+            o las obligaciones aplicables. La fecha de actualización aparecerá al
+            inicio de esta página.
+          </p>
+        </section>
 
-      <h2>5. Letras y servicios externos</h2>
-
-      <p>
-        Cuando el usuario utiliza las funciones relacionadas con letras, Arpen puede abrir
-        o consultar LRCLIB u otro servicio externo elegido por el usuario. Para realizar una
-        búsqueda, se pueden enviar datos como título, artista, álbum o duración de la canción
-        al servicio correspondiente. El uso de esos servicios se rige también por sus propias
-        políticas de privacidad.
-      </p>
-
-      <h2>6. Micrófono</h2>
-
-      <p>
-        El micrófono solo se utiliza si el usuario activa expresamente una función reactiva
-        o de calibración. Arpen no utiliza el micrófono para publicidad, vigilancia ni para
-        enviar grabaciones a servidores de Aurevia.
-      </p>
-
-      <h2>7. Compartición de datos</h2>
-
-      <p>Arpen solo comparte datos en los siguientes casos controlados por el usuario:</p>
-
-      <ul>
-        <li>Con Google Drive, cuando el usuario autoriza y crea, consulta o restaura un respaldo.</li>
-        <li>Con otro dispositivo, cuando el usuario inicia una transferencia mediante Arpen Link.</li>
-        <li>Con un servicio externo de letras, cuando el usuario realiza una búsqueda o abre dicho servicio.</li>
-      </ul>
-
-      <p>
-        Aurevia no vende información personal, no incorpora redes publicitarias y no comparte
-        datos para publicidad personalizada.
-      </p>
-
-      <h2>8. Conservación y eliminación</h2>
-
-      <ul>
-        <li>Los datos locales pueden eliminarse desde las opciones de Arpen, al borrar los datos de la aplicación o al desinstalarla.</li>
-        <li>Los respaldos de Google Drive pueden eliminarse desde Google Drive.</li>
-        <li>Los paquetes de Arpen Link y respaldos locales permanecen bajo control del usuario en la ubicación que este haya elegido.</li>
-        <li>Aurevia no conserva una base de datos propia con la biblioteca, archivos multimedia o respaldos de los usuarios.</li>
-      </ul>
-
-      <h2>9. Seguridad</h2>
-
-      <p>
-        Las comunicaciones con Google Drive y servicios web compatibles usan conexiones
-        seguras proporcionadas por dichos servicios. Las transferencias de Arpen Link ocurren
-        directamente dentro de la red local seleccionada por el usuario; se recomienda usar
-        redes confiables.
-      </p>
-
-      <h2>10. Público</h2>
-
-      <p>
-        Arpen está orientada a usuarios de 13 años o más. No está diseñada específicamente
-        para menores de 13 años.
-      </p>
-
-      <h2>11. Cambios a esta política</h2>
-
-      <p>
-        Esta política puede actualizarse cuando cambien las funciones de Arpen o las
-        obligaciones aplicables. La fecha de actualización se mostrará al inicio de esta
-        página.
-      </p>
-
-      <h2>12. Contacto</h2>
-
-      <p>
-        Para consultas sobre privacidad, escríbenos a
-        <a href="mailto:aureviaproyects.dev@gmail.com">aureviaproyects.dev@gmail.com</a>.
-      </p>
-
-      <footer>
-        © 2026 Aurevia. Política aplicable a Arpen para Android.
-      </footer>
-    </article>
+        <section id="contacto">
+          <h2>10. Contacto</h2>
+          <p>
+            Para consultas sobre privacidad, escribe a
+            <a href="mailto:aureviaproyects.dev@gmail.com">aureviaproyects.dev@gmail.com</a>.
+          </p>
+        </section>
+      </article>
+    </div>
   </main>
+
+  <footer class="page">
+    <p>© 2026 Aurevia.</p>
+    <p>Documento aplicable a Arpen para Android.</p>
+  </footer>
 </body>
 </html>
